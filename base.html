@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI Personal Finance Advisor{% endblock %}</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <i class="fa-solid fa-brain-circuit brand-icon"></i>
+                <span class="brand-text">FinAI <span class="brand-badge">Advisor</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="/" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#features" class="nav-item"><i class="fa-solid fa-list-check"></i> Modules</a>
+                <a href="#status" class="nav-item"><i class="fa-solid fa-server"></i> System Status</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="status-indicator online">
+                    <span class="dot"></span> Backend Active
+                </span>
+            </div>
+        </header>
+
+        <!-- Main Content Wrapper -->
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 AI Personal Finance Advisor | Built with Python Flask, SQLite & Modern Web Stack</p>
+        </footer>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

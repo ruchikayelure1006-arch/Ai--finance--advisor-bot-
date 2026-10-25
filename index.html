@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Overview - AI Personal Finance Advisor{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="step-badge"><i class="fa-solid fa-flag-checkered"></i> Step 1 Initialized</div>
+        <h1 class="hero-title">AI Personal Finance <span class="gradient-text">Advisor</span></h1>
+        <p class="hero-subtitle">
+            An intelligent, automated personal wealth management and budget optimization system built with Python, Machine Learning, and Modern Web Architecture.
+        </p>
+    </div>
+</section>
+
+<!-- System Status Card -->
+<section id="status" class="section-wrapper">
+    <div class="card status-card">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-heart-pulse icon-accent"></i> Server Connection Test</h3>
+        </div>
+        <div class="card-body">
+            <p>Test the connection between frontend templates and your Flask Python backend:</p>
+            <button id="checkApiBtn" class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane"></i> Send API Health Check
+            </button>
+            <div id="apiResponse" class="api-response-box hidden">
+                <div class="response-status"></div>
+                <pre class="response-json"></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Roadmap Overview -->
+<section id="features" class="section-wrapper">
+    <h2 class="section-title">Project Development Roadmap</h2>
+    <div class="grid grid-3">
+        <!-- Step 1 Card -->
+        <div class="card step-card active-step">
+            <div class="step-num">Step 01</div>
+            <h4>Flask & Project Setup</h4>
+            <p>Directory architecture, Flask environment setup, configuration & CSS design system.</p>
+            <span class="badge badge-success"><i class="fa-solid fa-check"></i> Completed</span>
+        </div>
+
+        <!-- Step 2 Card -->
+        <div class="card step-card">
+            <div class="step-num">Step 02</div>
+            <h4>Database & Auth</h4>
+            <p>SQLite schema, SQLAlchemy models, user registration, encrypted login & session handling.</p>
+            <span class="badge badge-pending">Next Step</span>
+        </div>
+
+        <!-- Step 3 Card -->
+        <div class="card step-card">
+            <div class="step-num">Step 03</div>
+            <h4>Transactions API</h4>
+            <p>Income & expense tracking, multi-category classification (Food, Bills, Shopping, Travel).</p>
+            <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+
+        <!-- Step 4 Card -->
+        <div class="card step-card">
+            <div class="step-num">Step 04</div>
+            <h4>Personal Dashboard</h4>
+            <p>Live financial overview metrics: total income, total expenses, savings rate & balance.</p>
+            <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+
+        <!-- Step 5 Card -->
+        <div class="card step-card">
+            <div class="step-num">Step 05</div>
+            <h4>Expense Analytics</h4>
+            <p>Interactive monthly & category charts powered by Chart.js library.</p>
+            <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+
+        <!-- Step 6 Card -->
+        <div class="card step-card">
+            <div class="step-num">Step 06</div>
+            <h4>AI Recommendations</h4>
+            <p>Algorithmic spending analysis & AI powered chatbot advisor for tailored financial advice.</p>
+            <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

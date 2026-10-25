@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment Secrets
+.env
+
+# SQLite Databases
+*.db
+*.sqlite3
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
